@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    flex: 0 0 auto;
+    border-bottom: 1px solid purple;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    min-height: 60px;
+    z-index: 100;
+}
+
+.logo {
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.ax {
+    color: #FF6B6B;
+    font-weight: 700;
+}
+
+.college {
+    color: #495057;
+    font-weight: 500;
+}
+
+.menu {
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+.embedding {
+    flex: 1 1 auto;
+    position: relative;
+    min-height: 0;
+}
+
+.padlet-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.padlet-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.footer {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.menu-container {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.menu-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    padding: 8px 0;
+    margin-top: 10px;
+}
+
+.menu-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown a:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 5px rgba(0,0,0,0.04);
+} 
